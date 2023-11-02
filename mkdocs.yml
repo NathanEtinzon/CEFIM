@@ -13,15 +13,17 @@ theme:
   favicon: img/logo.png
   logo: img/logo.png
   palette:
-    primary: deep purple
+
     # Swtich pour mode nuit
     - scheme: slate
+      primary: deep purple
       toggle:
         icon: material/weather-night 
         name: Thème nuit
 
     # Swtich pour mode jour
     - scheme: default
+      primary: deep purple
       toggle:
         icon: material/weather-sunny
         name: Thème jour
