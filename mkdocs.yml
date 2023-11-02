@@ -1,6 +1,19 @@
 site_name: Documentation Nathan Etinzon CEFIM
 theme:
   name: material
+  palette: 
+
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Thème nuit
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Thème jour
 nav:
   - Page d'accueil: index.md
   - Certificat IIS: AD-CS Certificat IIS.md
