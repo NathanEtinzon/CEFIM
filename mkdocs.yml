@@ -1,8 +1,8 @@
-site_name: Markdown Nathan Etinzon Cefim
+site_name: Documentation Nathan Etinzon CEFIM
 theme:
   name: material
 nav:
-  - Home: index.md
+  - page d'accueil: index.md
   - Certificat IIS: AD-CS Certificat IIS.md
   - Certificat Apache: AD-CS Certificat Apache.md
   - Rudder: ITIL_Etinzon_Nathan.md
