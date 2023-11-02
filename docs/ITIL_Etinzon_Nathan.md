@@ -77,7 +77,7 @@ Sur les deux machines :
 >Restriction des permissions root : user01" doit avoir le droit d'utiliser sudo, uniquement pour consulter les log dans "/var/log/syslog".
 >>*sudo nano /etc/sudoers*
 >>Ajouter les lignes :
->>>#Allow user1 to view /var/log/syslog
+>>>&#35;Allow user1 to view /var/log/syslog  
 >>>user1   ALL=(root) /bin/nano var/log/syslog/*
 
 ***
