@@ -6,12 +6,13 @@ site_description: Site compilant la documentation faite par Nathan Etinzon dans 
 #Copyright
 copyright: Copyright &copy; 2023. Tous droits réservés. Nathan Etinzon
 
+#Theme
 theme:
   name: material
   language: fr
   favicon: img/logo.png
   logo: img/logo.png
-  palette: 
+  palette:
     primary: deep purple
     # Swtich pour mode nuit
     - scheme: slate
@@ -25,6 +26,7 @@ theme:
         icon: material/weather-sunny
         name: Thème jour
 
+#Lien externe
 extra:
   social:
     - icon: fontawesome/brands/linkedin
@@ -33,6 +35,8 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/NathanEtinzon/CEFIM
       name: GitHub
+
+#Navigation
 nav:
   - Page d'accueil: index.md
   - Certificat IIS: AD-CS_Certificat_IIS.md
