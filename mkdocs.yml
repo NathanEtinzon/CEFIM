@@ -2,7 +2,7 @@ site_name: Documentation Nathan Etinzon CEFIM
 theme:
   name: material
 nav:
-  - page d'accueil: index.md
+  - Page d'accueil: index.md
   - Certificat IIS: AD-CS Certificat IIS.md
   - Certificat Apache: AD-CS Certificat Apache.md
   - Rudder: ITIL_Etinzon_Nathan.md
