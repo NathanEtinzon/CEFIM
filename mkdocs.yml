@@ -1,4 +1,16 @@
+# Information sur le projet
 site_name: Documentation Nathan Etinzon CEFIM
+site_author: Nathan Etinzon
+site_description: >-
+	Site compilant la documentation faite par Nathan Etinzon dans le cadre de la formation au CEFIM.
+
+#Copyright
+copyright: Copyright &copy; 2023. Tous droits réservés Nathan Etinzon
+
+#Icone
+icon:
+	logo: /docs/img/favicon.ico
+
 theme:
   name: material
   language: fr
@@ -15,6 +27,7 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Thème jour
+
 nav:
   - Page d'accueil: index.md
   - Certificat IIS: AD-CS Certificat IIS.md
