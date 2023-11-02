@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Certificat IIS - Markdown Nathan Etinzon Cefim</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Markdown Nathan Etinzon Cefim</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Certificat IIS</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../AD-CS%20Certificat%20Apache/" class="nav-link">Certificat Apache</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../ITIL_Etinzon_Nathan/" class="nav-link">Rudder</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href=".." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../AD-CS%20Certificat%20Apache/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#ad-cs-certificat-iis" class="nav-link">AD-CS Certificat IIS</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#1ere-etape-generation-de-la-requete-de-certificat" class="nav-link">1ère étape : Génération de la requête de certificat</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#2eme-etape-recuperation-de-la-requete" class="nav-link">2ème étape : Récupération de la requête</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#3eme-etape-creation-du-certificat" class="nav-link">3ème étape : Création du certificat</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#4eme-etape-recuperation-du-certificat" class="nav-link">4ème étape : Récupération du certificat</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#5eme-etape-importation-du-certificat" class="nav-link">5ème étape : Importation du certificat</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#6eme-etape-debugage-certificat-fantome" class="nav-link">6ème étape : Débugage certificat fantôme</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#7eme-etape-liaison-https" class="nav-link">7ème étape : Liaison HTTPS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#8eme-etape-redirection-http-https" class="nav-link">8ème étape : Redirection HTTP =&gt; HTTPS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#resultat" class="nav-link">Résultat</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="ad-cs-certificat-iis">AD-CS Certificat IIS</h1>
+<p>/!\ Remplacer les différentes informations par les votres /!\</p>
+<h2 id="1ere-etape-generation-de-la-requete-de-certificat">1ère étape : Génération de la requête de certificat</h2>
+<p><strong><em>Sur le serveur IIS</em></strong></p>
+<p>Dans la console de gestion de IIS, ouvrir la console <em>Certificat</em>, faire un clic-droit et sélectionner <em>Créer une demande de certificat</em>
+<img src= "https://imgur.com/tXb2ly6.jpg"></p>
+<p>Renseigner les informations suivantes.
+<img src= "https://imgur.com/jMyZmkB.jpg"></p>
+<p>Sélectionner le paramétrage ci-dessous.
+<img src= "https://imgur.com/3Lj0A4r.jpg"></p>
+<p>Renseigner le dossier et de nom où se trouvera la requête.
+<img src= "https://imgur.com/CkR0jjz.jpg">
+<img src= "https://imgur.com/BXhgsjF.jpg"></p>
+<h2 id="2eme-etape-recuperation-de-la-requete">2ème étape : Récupération de la requête</h2>
+<p><strong><em>Sur le serveur AD-CS</em></strong><br />
+<strong><em>Via Partage réseau / Winscp / VMtools</em></strong></p>
+<h2 id="3eme-etape-creation-du-certificat">3ème étape : Création du certificat</h2>
+<p><strong><em>Sur le serveur AD-CS</em></strong></p>
+<p>Sur PowerShell, entrer les commandes suivantes :<br />
+certutil -setreg policy\EditFlags +EDITF_ATTRIBUTESUBJECTALTNAME2<br />
+/!\ Rédemarrer le service sinon les modifications ne seront pas prises en compte /!\  </p>
+<p>Ensuite :<br />
+<img src= "https://imgur.com/co9XlnX.jpg">
+certreq -submit -attrib "CertificateTemplate:webServer\nSAN:dns=Ton_FQDN&amp;ipaddress=IP_IIS" Requête.txt</p>
+<p>Sélectionner l'autorité de certification.
+<img src= "https://imgur.com/PJgHLo1.jpg"></p>
+<p>Enregistrer le certificat en .cer
+<img src= "https://imgur.com/yHm2L91.jpg"></p>
+<h2 id="4eme-etape-recuperation-du-certificat">4ème étape : Récupération du certificat</h2>
+<p><strong><em>Sur le serveur IIS</em></strong><br />
+<strong><em>Partage réseau / Winscp / VMtools</em></strong></p>
+<h2 id="5eme-etape-importation-du-certificat">5ème étape : Importation du certificat</h2>
+<p><strong><em>Sur le serveur IIS</em></strong></p>
+<p>Dans la console de gestion de IIS, ouvrir la console <em>Certificat</em>, faite un clic-droit et sélectionner <em>Terminer une demande de certificat</em>.
+<img src= "https://imgur.com/lzvLCvU.jpg"></p>
+<p>Sélectionner le certificat.
+<img src= "https://imgur.com/fCH97Wg.jpg"></p>
+<h2 id="6eme-etape-debugage-certificat-fantome">6ème étape : Débugage certificat fantôme</h2>
+<p><strong><em>Sur le serveur IIS</em></strong><br />
+(Si le certificat disparait dès que la console est actualisée, suivez les étapes suivantes)</p>
+<p>Dans la console de certificat, dans le magasin <em>Hébergement Web</em>, rechercher le numéro de série de votre certificat et le copier.
+<img src= "https://imgur.com/fFOCRCA.jpg"></p>
+<p>Sous PowerShell, entrer la commande suivante :<br />
+certutil -repairstore webHosting Serial_Number</p>
+<p>Résultat :<br />
+<img src= "https://imgur.com/yrSOoAd.jpg"></p>
+<p>Rafraichir la console IIS et le certificat devrait réapparaître.</p>
+<h2 id="7eme-etape-liaison-https">7ème étape : Liaison HTTPS</h2>
+<p><strong><em>Sur le serveur IIS</em></strong></p>
+<p>Dans la console de gestion de IIS, faire un clic-droit sur le VHost et sélectionner <em>Modifier les liaisons</em>.
+<img src= "https://imgur.com/9nANl5W.jpg"></p>
+<p>Créer la liaison suivante en sélectionnant le certificat récemment importé.
+<img src= "https://imgur.com/jC0dYES.jpg"></p>
+<h2 id="8eme-etape-redirection-http-https">8ème étape : Redirection HTTP =&gt; HTTPS</h2>
+<p>Superbe procédure :
+https://www.ssl.com/how-to/redirect-http-to-https-with-windows-iis-10/</p>
+<hr />
+<h2 id="resultat">Résultat</h2>
+<p><img src= "https://imgur.com/HzpEvLy.jpg"></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,5 +1,6 @@
 site_name: Markdown Nathan Etinzon Cefim
-site_url: https://nathanetinzon.github.io/CEFIM
+theme:
+  name: material
 nav:
   - Home: index.md
   - Certificat IIS: AD-CS Certificat IIS.md

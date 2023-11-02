@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Rudder - Markdown Nathan Etinzon Cefim</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Markdown Nathan Etinzon Cefim</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../AD-CS%20Certificat%20IIS/" class="nav-link">Certificat IIS</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../AD-CS%20Certificat%20Apache/" class="nav-link">Certificat Apache</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Rudder</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../AD-CS%20Certificat%20Apache/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#deploiement-de-rudder" class="nav-link">Déploiement de Rudder</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#contexte" class="nav-link">Contexte</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tache-1-installation-et-configuration-du-serveur-rudder" class="nav-link">Tâche 1 : Installation et Configuration du Serveur Rudder</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tache-2-installation-et-configuration-dun-agent-rudder" class="nav-link">Tâche 2 : Installation et Configuration d'un Agent Rudder</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tache-3-renforcement-des-configurations-systemes" class="nav-link">Tâche 3 : Renforcement des Configurations Systèmes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#allow-user1-to-view-varlogsyslog" class="nav-link">Allow user1 to view /var/log/syslog</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#tache-4-audit-et-conformite" class="nav-link">Tâche 4 : Audit et Conformité</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tache-5-resolution-de-problemes-et-scenarios-pratiques" class="nav-link">Tâche 5 : Résolution de Problèmes et Scénarios Pratiques</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tache-6-integration-avec-itil-et-documentation" class="nav-link">Tâche 6 : Intégration avec ITIL et Documentation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tache-7-amelioration-continue-et-recommandations" class="nav-link">Tâche 7 : Amélioration Continue et Recommandations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="deploiement-de-rudder">Déploiement de Rudder</h1>
+<h2 id="contexte">Contexte</h2>
+<p>Vous êtes un administrateur système dans une entreprise qui souhaite améliorer sa gestion des services informatiques en adoptant les principes ITIL. Votre mission consiste à configurer et à utiliser Rudder pour automatiser la gestion des configurations, renforcer la sécurité, installer des applications et gérer les utilisateurs.</p>
+<h2 id="tache-1-installation-et-configuration-du-serveur-rudder">Tâche 1 : Installation et Configuration du Serveur Rudder</h2>
+<p><strong>1.1 Installation</strong></p>
+<p>Installez Rudder Server sur la machine virtuelle serveur dédiée</p>
+<blockquote>
+<p><em>sudo wget --quiet -O /etc/apt/trusted.gpg.d/rudder_apt_key.gpg "https://repository.rudder.io/apt/rudder_apt_key.gpg"</em></p>
+<p><em>sudo nano /etc/apt/sources.list.d/rudder.list</em></p>
+<p>Ajouter la ligne :<br />
+<em>deb [trusted=yes] http://repository.rudder.io/apt/8.0/ jammy main</em></p>
+<p><em>sudo apt-get update</em></p>
+<p><em>sudo apt-get install rudder-server</em></p>
+<p><em>sudo apt-get upgrade</em></p>
+<p><em>rudder server create-user -u n.etinzon</em></p>
+</blockquote>
+<hr />
+<p><strong>1.2 Validation</strong></p>
+<p>Connectez-vous à l'interface web de Rudder, vérifiez l'état du serveur et assurez-vous qu'il est prêt à communiquer avec les agents.</p>
+<p><img src= "https://imgur.com/wZVecz7.jpg"></p>
+<h2 id="tache-2-installation-et-configuration-dun-agent-rudder">Tâche 2 : Installation et Configuration d'un Agent Rudder</h2>
+<p><strong>2.1 Machine client Linux</strong></p>
+<p>Installez l'agent Rudder sur la machine cliente Linux, et configurez-la pour qu'elle communique avec le serveur.</p>
+<blockquote>
+<p><em>sudo wget --quiet -O /etc/apt/trusted.gpg.d/rudder_apt_key.gpg "https://repository.rudder.io/apt/rudder_apt_key.gpg"</em></p>
+<p><em>sudo nano /etc/apt/sources.list.d/rudder.list</em></p>
+<p>Ajouter la ligne :<br />
+<em>deb http://repository.rudder.io/apt/8.0/ jammy main</em></p>
+<p><em>sudo apt-get install rudder-agent</em></p>
+<p><em>rudder agent policy-server 163.172.163.218</em></p>
+<p><em>sudo rudder agent inventory</em></p>
+</blockquote>
+<p><strong>2.2 Validation</strong></p>
+<p>Assurez-vous que l'agent apparaisse dans l'interface web de Rudder et soit autorisée.</p>
+<p><img src= "https://imgur.com/bqM7HPY.jpg"></p>
+<h2 id="tache-3-renforcement-des-configurations-systemes">Tâche 3 : Renforcement des Configurations Systèmes</h2>
+<p><strong>3.1 Technique de Sécurité</strong></p>
+<p>Sur les deux machines :</p>
+<blockquote>
+<p>Création de comptes : S'assurer que les compte,s "user01" et "user02" sont existants. User01 a un shell en "bash", user02 en "nologin". Les homes seront dans "/home/nom_user"</p>
+<blockquote>
+<p><em>sudo useradd -m -s /usr/bin/bash user01</em><br />
+<em>sudo useradd -m -s /usr/bin/nologin user02</em></p>
+</blockquote>
+</blockquote>
+<p><img src= "https://imgur.com/H0faw0L.jpg"></p>
+<hr />
+<blockquote>
+<p>Désactivation des comptes : S'assurer que le compte "user02" est désactivé.</p>
+<blockquote>
+<p><em>sudo usermod -L user02</em></p>
+</blockquote>
+</blockquote>
+<hr />
+<blockquote>
+<p>Restriction des permissions root : user01" doit avoir le droit d'utiliser sudo, uniquement pour consulter les log dans "/var/log/syslog".</p>
+<blockquote>
+<p><em>sudo nano /etc/sudoers</em>
+Ajouter les lignes :</p>
+<blockquote>
+<h1 id="allow-user1-to-view-varlogsyslog">Allow user1 to view /var/log/syslog</h1>
+<p>user1   ALL=(root) /bin/nano var/log/syslog/*</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<hr />
+<blockquote>
+<p>Configuration du Pare-feu : Autoriser uniquement les ports 22 (SSH), 80 (HTTP), 5309 et 443 (HTTPS). Bloquer tous les autres ports.</p>
+<blockquote>
+<p><em>sudo ufw allow 22</em>
+<em>sudo ufw allow 80</em>
+<em>sudo ufw allow 5309</em>
+<em>sudo ufw allow 443</em>
+<em>sudo ufw enable</em></p>
+</blockquote>
+</blockquote>
+<p><img src= "https://imgur.com/Ywm0KvA.jpg"></p>
+<hr />
+<blockquote>
+<p>Mise à jour des Packages : Appliquer toutes les mises à jour de sécurité disponibles.</p>
+<blockquote>
+<p><em>sudo apt-get update</em>
+<em>sudo apt-get upgrade</em></p>
+</blockquote>
+</blockquote>
+<hr />
+<blockquote>
+<p>Installation de Packages : Installer "fail2ban" et "apache2" et s'assurer du démarrage des services.</p>
+<blockquote>
+<p><em>sudo apt-get install apache2</em>
+<em>sudo apt-get install fail2ban</em></p>
+</blockquote>
+</blockquote>
+<p><img src= "https://imgur.com/vlSH3Ba.jpg"></p>
+<hr />
+<blockquote>
+<p>Déploiement de fichiers : Déployer une page web contenant l'IP du serveur.</p>
+</blockquote>
+<p><img src= "https://imgur.com/hGNjgYd.jpg"></p>
+<hr />
+<blockquote>
+<p>Renforcer la configuration SSH, mais sans rester dehors.</p>
+<blockquote>
+<p>Générer une paire de clé sur la machine locale</p>
+<blockquote>
+<p><em>ssh-keygen</em>
+<em>cat ~/.ssh/id_rsa.pub</em>
+Copier le contenu
+Sur l'hôte distant, coller la clé dans /home/n.etinzon/.ssh/authorized_keys
+Passer le paramètre <em>PasswordAuthentification yes</em> =&gt; <em>PasswordAuthentification no</em> dans /etc/ssh/ssh_config
+<em>sudo nano /etc/ssh/ssh_config</em></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><img src= "https://imgur.com/qFKnoLM.jpg"></p>
+<h2 id="tache-4-audit-et-conformite">Tâche 4 : Audit et Conformité</h2>
+<p><strong>4.1 Audit des Configurations</strong></p>
+<p>Utilisez les fonctionnalités d'audit de Rudder pour vérifier la conformité des machines avec les configurations souhaitées.</p>
+<p><img src= "https://imgur.com/ZTZ2Hah.jpg"></p>
+<hr />
+<p><strong>4.2 Rapport de Conformité</strong></p>
+<p>Générez un rapport de conformité à partir de l'interface web de Rudder et analysez les résultats.</p>
+<p>Possibilité d'ajouter d'un module pour avoir un pdf.</p>
+<h2 id="tache-5-resolution-de-problemes-et-scenarios-pratiques">Tâche 5 : Résolution de Problèmes et Scénarios Pratiques</h2>
+<p><strong>5.1 Diagnostic</strong></p>
+<p>Diagnostiquez et résolvez un problème de configuration sur l'une des machines, simulé ou réel.</p>
+<p><img src= "https://imgur.com/bzQ6n4N.jpg"></p>
+<hr />
+<p><strong>5.2 Scénario Pratique</strong></p>
+<p>Répondez à une demande de changement fictive, en modifiant les configurations sur les machines via Rudder.</p>
+<p><img src= "https://imgur.com/FBv3C2a.jpg"></p>
+<p><img src= "https://imgur.com/sRzv76w.jpg"></p>
+<hr />
+<p><strong>Résultat :</strong></p>
+<p><img src= "https://imgur.com/eQ6k4sf.jpg"></p>
+<h2 id="tache-6-integration-avec-itil-et-documentation">Tâche 6 : Intégration avec ITIL et Documentation</h2>
+<p><strong>6.1 Alignement ITIL</strong></p>
+<p>Documentez comment les actions réalisées s'alignent avec les processus ITIL, en particulier la Gestion des Services et la Gestion des Configurations.</p>
+<h2 id="tache-7-amelioration-continue-et-recommandations">Tâche 7 : Amélioration Continue et Recommandations</h2>
+<p><strong>7.1 Analyse</strong></p>
+<p>Identifiez les domaines d'amélioration dans la manière dont Rudder est utilisé et proposez des actions concrètes.</p>
+<p><strong>7.2 Recommandations</strong></p>
+<p>Formulez des recommandations pour l'utilisation future de Rudder dans l'organisation, en vous basant sur les meilleures pratiques ITIL.</p>
+<p>coucou</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
