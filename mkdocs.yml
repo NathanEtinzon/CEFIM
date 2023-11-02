@@ -12,7 +12,7 @@ theme:
   favicon: img/logo.png
   logo: img/logo.png
   palette: 
-   primary: deep purple
+    primary: deep purple
     # Swtich pour mode nuit
     - scheme: slate
       toggle:
