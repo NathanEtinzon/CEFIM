@@ -179,3 +179,5 @@ Identifiez les domaines d'amélioration dans la manière dont Rudder est utilis�
 **7.2 Recommandations**
 
 Formulez des recommandations pour l'utilisation future de Rudder dans l'organisation, en vous basant sur les meilleures pratiques ITIL.
+
+coucou
