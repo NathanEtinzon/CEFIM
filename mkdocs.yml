@@ -4,7 +4,7 @@ site_author: Nathan Etinzon
 site_description: Site compilant la documentation faite par Nathan Etinzon dans le cadre de la formation au CEFIM.
 
 #Copyright
-copyright: Copyright &copy; 2023. Tous droits réservés Nathan Etinzon
+copyright: Copyright &copy; 2023. Tous droits réservés. Nathan Etinzon
 
 theme:
   name: material
@@ -24,10 +24,10 @@ theme:
         icon: material/weather-sunny
         name: Thème jour
 
-  extra:
-    social:
-      - icon: fontawesome/brands/linkedin
-        link: https://www.linkedin.com/in/nathan-etinzon-7006101b6/
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/nathan-etinzon-7006101b6/
 
 nav:
   - Page d'accueil: index.md
