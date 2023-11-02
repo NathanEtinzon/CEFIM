@@ -9,7 +9,7 @@ copyright: Copyright &copy; 2023. Tous droits réservés. Nathan Etinzon
 theme:
   name: material
   language: fr
-  favicon: docs/img/favicon.png
+  favicon: img/favicon.png
   palette: 
 
     # Swtich pour mode nuit
