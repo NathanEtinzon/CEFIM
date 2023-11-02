@@ -4,14 +4,14 @@ theme:
   language: fr
   palette: 
 
-    # Palette toggle for light mode
-    - scheme: default
+    # Swtich pour mode nuit
+    - scheme: slate
       toggle:
         icon: material/weather-night 
         name: Thème nuit
 
-    # Palette toggle for dark mode
-    - scheme: slate
+    # Swtich pour mode jour
+    - scheme: default
       toggle:
         icon: material/weather-sunny
         name: Thème jour
