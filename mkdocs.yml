@@ -28,9 +28,10 @@ extra:
   social:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/nathan-etinzon-7006101b6/
-  social:
+      name: Linkedin
     - icon: fontawesome/brands/github
       link: https://github.com/NathanEtinzon/CEFIM
+      name: GitHub
 nav:
   - Page d'accueil: index.md
   - Certificat IIS: AD-CS_Certificat_IIS.md
