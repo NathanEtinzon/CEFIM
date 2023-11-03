@@ -171,4 +171,4 @@ Répondez à une demande de changement fictive, en modifiant les configurations 
 Documentez comment les actions réalisées s'alignent avec les processus ITIL, en particulier la Gestion des Services et la Gestion des Configurations.  
 Identifiez les domaines d'amélioration et les recommandations dans la manière dont Rudder est utilisé et proposez des actions concrètes.
 
-<img src= "https://imgur.com/wIDlnSw.jpg">
+<img src= "https://imgur.com/wIDlnSw.png">
