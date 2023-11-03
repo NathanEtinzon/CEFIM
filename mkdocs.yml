@@ -14,7 +14,6 @@ theme:
   logo: img/logo.png
   features:
     - toc.follow
-    - toc.integrate 
   palette:
 
     # Swtich pour mode nuit
@@ -30,10 +29,6 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Thème jour
-
-#Rend invisible la table des matières
-hide:
-  - navigation
 
 #Lien externe
 extra:
