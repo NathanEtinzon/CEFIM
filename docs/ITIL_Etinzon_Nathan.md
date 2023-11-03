@@ -4,7 +4,7 @@
 Vous êtes un administrateur système dans une entreprise qui souhaite améliorer sa gestion des services informatiques en adoptant les principes ITIL. Votre mission consiste à configurer et à utiliser Rudder pour automatiser la gestion des configurations, renforcer la sécurité, installer des applications et gérer les utilisateurs.
 
 ## 1ère étape : Installation et Configuration du Serveur Rudder
-**1.1 Installation**
+### 1.1 Installation
 
 Installez Rudder Server sur la machine virtuelle serveur dédiée
 
@@ -25,14 +25,15 @@ Installez Rudder Server sur la machine virtuelle serveur dédiée
 
 ***
 
-**1.2 Validation**
+### 1.2 Validation
 
 Connectez-vous à l'interface web de Rudder, vérifiez l'état du serveur et assurez-vous qu'il est prêt à communiquer avec les agents.
 
 <img src= "https://imgur.com/wZVecz7.jpg">
 
 ## 2ème étape : Installation et Configuration d'un Agent Rudder
-**2.1 Machine client Linux**
+
+### 2.1 Machine client Linux
 
 Installez l'agent Rudder sur la machine cliente Linux, et configurez-la pour qu'elle communique avec le serveur.
 
@@ -49,7 +50,7 @@ Installez l'agent Rudder sur la machine cliente Linux, et configurez-la pour qu'
 
 >*sudo rudder agent inventory*
 
-**2.2 Validation**
+### 2.2 Validation
 
 Assurez-vous que l'agent apparaisse dans l'interface web de Rudder et soit autorisée.
 
@@ -57,7 +58,7 @@ Assurez-vous que l'agent apparaisse dans l'interface web de Rudder et soit autor
 
 ## 3ème étape : Renforcement des Configurations Systèmes
 
-**3.1 Technique de Sécurité**
+### 3.1 Technique de Sécurité
 
 Sur les deux machines :
 
@@ -126,7 +127,7 @@ Sur les deux machines :
 
 ## 4ème étape : Audit et Conformité
 
-**4.1 Audit des Configurations**
+### 4.1 Audit des Configurations
 
 Utilisez les fonctionnalités d'audit de Rudder pour vérifier la conformité des machines avec les configurations souhaitées.
 
@@ -134,7 +135,7 @@ Utilisez les fonctionnalités d'audit de Rudder pour vérifier la conformité de
 
 ***
 
-**4.2 Rapport de Conformité**
+### 4.2 Rapport de Conformité
 
 Générez un rapport de conformité à partir de l'interface web de Rudder et analysez les résultats.
 
@@ -142,7 +143,7 @@ Possibilité d'ajouter d'un module pour avoir un pdf.
 
 ## 5ème étape : Résolution de Problèmes et Scénarios Pratiques
 
-**5.1 Diagnostic**
+### 5.1 Diagnostic
 
 Diagnostiquez et résolvez un problème de configuration sur l'une des machines, simulé ou réel.
 
@@ -150,7 +151,7 @@ Diagnostiquez et résolvez un problème de configuration sur l'une des machines,
 
 ***
 
-**5.2 Scénario Pratique**
+### 5.2 Scénario Pratique
 
 Répondez à une demande de changement fictive, en modifiant les configurations sur les machines via Rudder.
 
@@ -166,7 +167,7 @@ Répondez à une demande de changement fictive, en modifiant les configurations 
 
 ## 6ème étape : Intégration avec ITIL, Amélioration Continue et Recommandations
 
-**6.1 Alignement ITIL, Analyse et Recommandations**
+### 6.1 Alignement ITIL, Analyse et Recommandations
 
 Documentez comment les actions réalisées s'alignent avec les processus ITIL, en particulier la Gestion des Services et la Gestion des Configurations.  
 Identifiez les domaines d'amélioration et les recommandations dans la manière dont Rudder est utilisé et proposez des actions concrètes.

@@ -1,5 +1,6 @@
 # AD-CS Certificat IIS
-/!\ Remplacer les différentes informations par les votres /!\
+
+**/!\ Remplacer les différentes informations par les votres /!\\**
 
 ## 1ère étape : Génération de la requête de certificat
 ***Sur le serveur IIS***
