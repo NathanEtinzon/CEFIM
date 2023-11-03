@@ -41,6 +41,6 @@ extra:
 #Navigation
 nav:
   - Page d'accueil: index.md
-  - Certificat IIS: AD-CS_Certificat_IIS.md
-  - Certificat Apache: AD-CS_Certificat_Apache.md
+  - AD-CS | Certificat IIS: AD-CS_Certificat_IIS.md
+  - AD-CS | Certificat Apache: AD-CS_Certificat_Apache.md
   - Rudder: ITIL_Etinzon_Nathan.md
