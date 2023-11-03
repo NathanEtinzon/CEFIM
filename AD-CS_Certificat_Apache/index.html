@@ -210,7 +210,9 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Documentation Nathan Etinzon CEFIM" class="md-nav__button md-logo" aria-label="Documentation Nathan Etinzon CEFIM" data-md-component="logo">
       
@@ -401,88 +403,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1ere-etape-generation-du-cle-avec-openssl" class="md-nav__link">
-    1ère étape : Génération du clé avec openssl
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2eme-etape-creation-dun-fichier-de-conf-avec-les-subjectaltname" class="md-nav__link">
-    2ème étape : Création d'un fichier de conf avec les subjectAltName
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3eme-etape-creation-du-csr-avec-le-fichier-de-conf" class="md-nav__link">
-    3ème étape : Création du csr avec le fichier de conf
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4eme-etape-importer-le-csr-sur-lad-cs" class="md-nav__link">
-    4ème étape : Importer le csr sur l'AD-CS
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5eme-etape-signer-le-csr-avec-lauthorite-de-certification" class="md-nav__link">
-    5ème étape : Signer le csr avec l'authorité de certification
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6eme-etape-importer-le-cer-dans-lapache" class="md-nav__link">
-    6ème étape : Importer le .cer dans l'apache
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7eme-etape-configuration-dapache" class="md-nav__link">
-    7ème étape : Configuration d'apache
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resultat" class="md-nav__link">
-    Résultat
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -610,7 +530,7 @@ SSLCertificateKeyFile   /etc/ssl/private/www.etinzon.cefim.key</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.follow", "toc.integrate"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.aecac24b.min.js"></script>
