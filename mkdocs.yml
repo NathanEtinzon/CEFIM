@@ -30,6 +30,10 @@ theme:
         icon: material/weather-sunny
         name: Thème jour
 
+#CSS
+extra_css:
+  - stylesheets/extra.css
+
 #Lien externe
 extra:
   social:
