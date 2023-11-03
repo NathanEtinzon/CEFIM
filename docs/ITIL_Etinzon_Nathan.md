@@ -3,7 +3,7 @@
 ## Contexte
 Vous êtes un administrateur système dans une entreprise qui souhaite améliorer sa gestion des services informatiques en adoptant les principes ITIL. Votre mission consiste à configurer et à utiliser Rudder pour automatiser la gestion des configurations, renforcer la sécurité, installer des applications et gérer les utilisateurs.
 
-## Tâche 1 : Installation et Configuration du Serveur Rudder
+## 1ère étape : Installation et Configuration du Serveur Rudder
 **1.1 Installation**
 
 Installez Rudder Server sur la machine virtuelle serveur dédiée
@@ -31,7 +31,7 @@ Connectez-vous à l'interface web de Rudder, vérifiez l'état du serveur et ass
 
 <img src= "https://imgur.com/wZVecz7.jpg">
 
-## Tâche 2 : Installation et Configuration d'un Agent Rudder
+## 2ème étape : Installation et Configuration d'un Agent Rudder
 **2.1 Machine client Linux**
 
 Installez l'agent Rudder sur la machine cliente Linux, et configurez-la pour qu'elle communique avec le serveur.
@@ -55,7 +55,7 @@ Assurez-vous que l'agent apparaisse dans l'interface web de Rudder et soit autor
 
 <img src= "https://imgur.com/bqM7HPY.jpg">
 
-## Tâche 3 : Renforcement des Configurations Systèmes
+## 3ème étape : Renforcement des Configurations Systèmes
 
 **3.1 Technique de Sécurité**
 
@@ -124,7 +124,7 @@ Sur les deux machines :
 
 <img src= "https://imgur.com/qFKnoLM.jpg">
 
-## Tâche 4 : Audit et Conformité
+## 4ème étape : Audit et Conformité
 
 **4.1 Audit des Configurations**
 
@@ -140,7 +140,7 @@ Générez un rapport de conformité à partir de l'interface web de Rudder et an
 
 Possibilité d'ajouter d'un module pour avoir un pdf.
 
-## Tâche 5 : Résolution de Problèmes et Scénarios Pratiques
+## 5ème étape : Résolution de Problèmes et Scénarios Pratiques
 
 **5.1 Diagnostic**
 
@@ -164,7 +164,7 @@ Répondez à une demande de changement fictive, en modifiant les configurations 
 
 <img src= "https://imgur.com/eQ6k4sf.jpg">
 
-## Tâche 6 : Intégration avec ITIL, Amélioration Continue et Recommandations
+## 6ème étape : Intégration avec ITIL, Amélioration Continue et Recommandations
 
 **6.1 Alignement ITIL, Analyse et Recommandations**
 
