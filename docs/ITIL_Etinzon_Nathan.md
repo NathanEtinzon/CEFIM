@@ -164,20 +164,11 @@ Répondez à une demande de changement fictive, en modifiant les configurations 
 
 <img src= "https://imgur.com/eQ6k4sf.jpg">
 
-## Tâche 6 : Intégration avec ITIL et Documentation
+## Tâche 6 : Intégration avec ITIL, Amélioration Continue et Recommandations
 
-**6.1 Alignement ITIL**
+**6.1 Alignement ITIL, Analyse et Recommandations**
 
-Documentez comment les actions réalisées s'alignent avec les processus ITIL, en particulier la Gestion des Services et la Gestion des Configurations.
+Documentez comment les actions réalisées s'alignent avec les processus ITIL, en particulier la Gestion des Services et la Gestion des Configurations.  
+Identifiez les domaines d'amélioration et les recommandations dans la manière dont Rudder est utilisé et proposez des actions concrètes.
 
-## Tâche 7 : Amélioration Continue et Recommandations
-
-**7.1 Analyse**
-
-Identifiez les domaines d'amélioration dans la manière dont Rudder est utilisé et proposez des actions concrètes.
-
-**7.2 Recommandations**
-
-Formulez des recommandations pour l'utilisation future de Rudder dans l'organisation, en vous basant sur les meilleures pratiques ITIL.
-
-coucou
+<img src= "https://imgur.com/pJmcRdk.jpg">
