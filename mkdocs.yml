@@ -14,6 +14,7 @@ theme:
   logo: img/logo.png
   features:
     - toc.follow
+    - navigation.top
   palette:
 
     # Swtich pour mode nuit
