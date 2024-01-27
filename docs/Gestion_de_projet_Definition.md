@@ -46,16 +46,13 @@
 #### <u>Critère</u>
 >Élément évalué pour prendre une décision dans le cadre d'une procédure de sélection (ex : critères de qualité, prix, etc.).
 
-#### <u>CTE</u> (Cahier des Techniques de l'Entrepreneur)
->Document détaillant les spécifications techniques exigées par l'entrepreneur pour la réalisation d'un marché ou d'un projet.
-
 #### <u>DC1, DC2, DC4</u> (Déclaration du Candidat)
 >Documents administratifs utilisés lors des appels d'offres pour vérifier l'éligibilité des entreprises à soumissionner pour un marché public.
 
-#### <u>DPGF</u> (Détail Quantitatif et Estimatif)
+#### <u>DQE</u> (Détail Quantitatif et Estimatif)
 >Document détaillant les quantités et les estimations de coûts pour chaque élément d'un marché public.
 
-#### <u>DQE</u> (Décomposition du Prix Global et Forfaitaire)
+#### <u>DPGF</u> (Décomposition du Prix Global et Forfaitaire)
 >Document détaillant le prix total et forfaitaire d'un marché public, décomposé en différents éléments.
 
 #### <u>DUME</u> (Document Unique de Marché Européen)
