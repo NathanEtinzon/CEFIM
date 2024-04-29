@@ -111,7 +111,7 @@ jQuery Migrate
 
 ***
 
-### Accès initial
+## Accès initial
 
 > - Ajouter internal.thm dans /etc/host
 > - Accèder à http://10.10.33.91/wordpress/wp-login.php  
@@ -121,7 +121,7 @@ jQuery Migrate
 > - Lancer un listener (`nc -lvnp 4444`)
 > - Accèder à la page http://internal.thm/blog/wp-content/themes/twentyseventeen/404.php
 
-### Escalade de privilège
+## Escalade de privilège
 
 > - Upgrader du webshell vers un meterpreter
 > - Executer post(multi/recon/local_exploit_suggester)  
