@@ -55,3 +55,5 @@ nav:
   - PenTest Cheat Sheet : 'PenTest_Cheat_Sheet.md'
   - 'Write-up TryHack Me':
     - 'Internal': 'Internal_Write-Up.md'
+    - 'Mr Robot': 'Mr-Robot_Write-Up.md'
+    
