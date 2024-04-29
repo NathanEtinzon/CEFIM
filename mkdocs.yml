@@ -47,10 +47,11 @@ extra:
 
 #Navigation
 nav:
-  - Page d'accueil: index.md
-  - AD-CS | Certificat IIS: AD-CS_Certificat_IIS.md
-  - AD-CS | Certificat Apache: AD-CS_Certificat_Apache.md
-  - Rudder: ITIL_Etinzon_Nathan.md
-  - Gestion de projet | Définition : Gestion_de_projet_Definition.md
-  - PenTest Cheat Sheet : PenTest_Cheat_Sheet.md
-  - Write-up TryHack Me | Internal : Internal_Write-Up.md
+  - Page d'accueil: 'index.md'
+  - AD-CS | Certificat IIS: 'AD-CS_Certificat_IIS.md'
+  - AD-CS | Certificat Apache: 'AD-CS_Certificat_Apache.md'
+  - Rudder: 'ITIL_Etinzon_Nathan.md'
+  - Gestion de projet | Définition : 'Gestion_de_projet_Definition.md'
+  - PenTest Cheat Sheet : 'PenTest_Cheat_Sheet.md'
+  - 'Write-up TryHack Me':
+    - 'Internal': 'Internal_Write-Up.md'
