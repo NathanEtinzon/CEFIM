@@ -458,14 +458,20 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#knockd" class="md-nav__link">
     <span class="md-ellipsis">
       Knockd
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Knockd">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#installation_1" class="md-nav__link">
@@ -730,14 +736,20 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#knockd" class="md-nav__link">
     <span class="md-ellipsis">
       Knockd
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Knockd">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#installation_1" class="md-nav__link">
@@ -799,8 +811,8 @@
 <h2 id="bonnes-pratiques-implementation-ssh">Bonnes pratiques - Implémentation SSH</h2>
 <ul>
 <li>Références:  <ul>
-<li>https://cyber.gouv.fr/publications/usage-securise-dopenssh  </li>
-<li>https://www.ssh-audit.com/hardening_guides.html</li>
+<li><a href="https://cyber.gouv.fr/publications/usage-securise-dopenssh">https://cyber.gouv.fr/publications/usage-securise-dopenssh</a>  </li>
+<li><a href="https://www.ssh-audit.com/hardening_guides.html">https://www.ssh-audit.com/hardening_guides.html</a></li>
 </ul>
 </li>
 </ul>
@@ -930,7 +942,7 @@ Cette restriction doit s’appliquer en droits positifs : uniquement ceux explic
 <h2 id="the-bastion">The Bastion</h2>
 <ul>
 <li>Références:<ul>
-<li>https://ovh.github.io/the-bastion/</li>
+<li><a href="https://ovh.github.io/the-bastion/">https://ovh.github.io/the-bastion/</a></li>
 </ul>
 </li>
 </ul>
@@ -989,10 +1001,10 @@ Cette restriction doit s’appliquer en droits positifs : uniquement ceux explic
  | 198.51.100.42 | 22  | root| personal | johndoe | 2020-05-01|  
  -----------------------------------------------------\&lt;/selfListAccesses&gt;---
 </code></pre>
-<h3 id="knockd">Knockd</h3>
+<h2 id="knockd">Knockd</h2>
 <ul>
 <li>Références:<ul>
-<li>https://goteleport.com/blog/ssh-port-knocking/</li>
+<li><a href="https://goteleport.com/blog/ssh-port-knocking/">https://goteleport.com/blog/ssh-port-knocking/</a></li>
 </ul>
 </li>
 </ul>
@@ -1029,9 +1041,10 @@ Cette restriction doit s’appliquer en droits positifs : uniquement ceux explic
 <p><code>systemctl start knockd</code><br />
 <code>systemctl enable knockd</code></p>
 <h3 id="configuration-iptables">Configuration iptables</h3>
-<p><em>Via un script pour se simplifier la vie</em>
-     # !/bin/bash  </p>
-<pre><code> # Delete current rules  
+<p><em>Via un script pour se simplifier la vie</em></p>
+<pre><code> # !/bin/bash
+
+ # Delete current rules  
  iptables -F ; iptables -X
 
  # Don't f*ck up estabished connection  
