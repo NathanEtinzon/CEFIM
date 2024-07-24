@@ -3,8 +3,8 @@
 ## Bonnes pratiques - Implémentation SSH
 
 - Références:  
-     - https://cyber.gouv.fr/publications/usage-securise-dopenssh  
-     - https://www.ssh-audit.com/hardening_guides.html
+     - [https://cyber.gouv.fr/publications/usage-securise-dopenssh](https://cyber.gouv.fr/publications/usage-securise-dopenssh)  
+     - [https://www.ssh-audit.com/hardening_guides.html](https://www.ssh-audit.com/hardening_guides.html)
 
 ---
 
@@ -90,7 +90,7 @@ Cette restriction doit s’appliquer en droits positifs : uniquement ceux explic
 ## The Bastion
 
 - Références:
-     - https://ovh.github.io/the-bastion/
+     - [https://ovh.github.io/the-bastion/](https://ovh.github.io/the-bastion/)
 
 ---
 
@@ -165,10 +165,10 @@ Cette restriction doit s’appliquer en droits positifs : uniquement ceux explic
      | 198.51.100.42 | 22  | root| personal | johndoe | 2020-05-01|  
      -----------------------------------------------------\</selfListAccesses>---
 
-### Knockd
+## Knockd
 
 - Références:
-     - https://goteleport.com/blog/ssh-port-knocking/
+     - [https://goteleport.com/blog/ssh-port-knocking/](https://goteleport.com/blog/ssh-port-knocking/)
 
 ---
 
@@ -212,6 +212,7 @@ Cette restriction doit s’appliquer en droits positifs : uniquement ceux explic
 ### Configuration iptables
 
 *Via un script pour se simplifier la vie*
+
      # !/bin/bash  
      
      # Delete current rules  
