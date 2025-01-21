@@ -53,6 +53,8 @@ nav:
   - Rudder: 'ITIL_Etinzon_Nathan.md'
   - Gestion de projet | Définition : 'Gestion_de_projet_Definition.md'
   - Hardening SSH: 'Hardening_Etinzon_Nathan.md'
+  - Terraform/Ansible : 'Terraform_Ansible.md'
+  - Haute disponibilité dans les bases de données : 'HD_BDD.md'
   - Palo-Alto concise documentation: 'Palo-Alto.md'
   - PenTest Cheat Sheet : 'PenTest_Cheat_Sheet.md'
   - 'Write-up TryHack Me':
